@@ -1,0 +1,713 @@
+// ! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css
+
+// Документ =============================================================================
+
+// 1. Фикс высоты строки для всех браузеров
+// 2. Предотвращение изменения размера шрифта после изменения ориентации экрана в * IE на 
+//    Windows Phone и в iOS.
+html
+  line-height: 1.15               // 1.
+  -ms-text-size-adjust: 100%      // 2.
+  -webkit-text-size-adjust: 100%  // 2.
+
+// Секции ===============================================================================
+
+// Удалить внешние отступы во всех браузерах.
+body
+  margin: 0
+
+// Корректное отображение тегов в IE 9-.
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section
+  display: block
+
+audio,
+canvas,
+progress,
+video
+  display: inline-block
+  vertical-align: baseline
+
+[hidden],
+template
+  display: none
+
+// Корректный внешний отступ для IE8.
+figure
+  margin: 1em 40px
+
+// Добавить правильное отображение во всех браузерах.
+summary
+  display: list-item
+
+// Исправление размера шрифта и внешних отступов заголовка H1, который обёрнут в тегах 
+// `section`, `article` для браузеров Chrome, Safari и Firefox.
+h1
+  font-size: 2em
+  margin: 0.67em 0
+
+// Grouping content =====================================================================
+
+// 1. Корректный размер окна для Firefox
+// 2. Показать переполнение в Edge и IE.
+hr
+  -webkit-box-sizing: content-box   // 1.
+  -moz-box-sizing: content-box      // 1.
+  box-sizing: content-box           // 1.
+  height: 0                         // 1.
+  overflow: visible                 // 2.
+
+// 1. Фикс наследования и масштабирования размера шрифта для всех браузеров
+// 2. Фикс изменения размера шрифта для тега em для всех браузеров.
+pre,
+code,
+kbd,
+samp
+  font-family: monospace, monospace // 1.
+  font-size: 1em                    // 2.
+
+// Текстовая семантика ==================================================================
+
+// 1. Удалить серый фон на активных ссылках в IE 10.
+// 2. Удалить разрыв в подчеркнутых ссылках для iOS 8+ и Safari 8+.
+a
+  background-color: transparent           // 1.
+  -webkit-text-decoration-skip: objects   // 2.
+
+// 1. Удалить нижнею границу в Chrome 57- и Firefox 39-
+// 2. Корректное оформление текста в Chrome, Edge, IE, Opera и Safari.
+abbr[title]
+  border-bottom: none                 // 1.
+  text-decoration: underline          // 2.
+  text-decoration: underline dotted   // 2.
+
+// 1. Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+// 2. Корректное отображение шрифта в Chrome, Edge и Safari.
+b,
+strong
+  font-weight: inherit    // 1.
+  font-weight: bolder     // 2.
+
+// Корректное отображения шрифта для Android 4.3-.
+dfn
+  font-style: italic
+
+// Добавить ожидаемый цвет и фон для IE 9-.
+mark
+  background-color: #ff0
+  color: #000
+
+// Корректный размер шрифта для всех браузеров.
+small
+  font-size: 80%
+
+// Предотвращение влияния елементов sub и sup на высоту строки.
+sub,
+sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sub
+  bottom: -0.25em
+
+sup
+  top: -0.5em
+
+// Встроенный контент ===================================================================
+
+// Корректное отображение для iOS 4-7.
+audio:not([controls])
+  display: none
+  height: 0
+
+// Удалить границу на изображениях обёрнутых в ссылку для IE 10-.
+img
+  border-style: none
+
+// Скрыть переполнение в IE.
+svg:not(:root)
+  overflow: hidden
+
+// Формы ================================================================================
+
+// 1. Исправить стиль шрифта для всех браузеров.
+// 2. Удалить внешний отступ для Firefox и Safari.
+button,
+input,
+optgroup,
+select,
+textarea
+  font-family: sans-serif   // 1.
+  font-size: 100%           // 1.
+  line-height: 1.15         // 1.
+  margin: 0                 // 2.
+
+// Показать переполнение в Edge.
+button,
+input
+  overflow: visible
+
+// Удалить наследование трансормации текста в Firefox.
+button,
+select
+  text-transform: none
+
+// Передотвращение ошибки в Android 4, где встроенные объекты управления audio и videeo
+// тегами ломались.
+// Исправить неспособность стилизовать интерактивные типы объектов в iOS и Safari.
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"]
+  -webkit-appearance: button
+  cursor: pointer
+
+// Удалить внутреннюю границу и отступы в Firefox.
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+  border-style: none
+  padding: 0
+
+// Восставновить стили фокуса не установленные предыдущим правилом.
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring
+  outline: 1px dotted ButtonText
+
+// Исправить отступы в Firefox.
+fieldset
+  margin: 0 2px
+  padding: 0.35em 0.75em 0.625em
+
+// 1. Исправить перенос текста в Edge и IE.
+// 2. Исправить наследование цвета из элементов `fieldset` в IE.
+// 3. Remove the padding so developers are not caught out when they zero out `fieldset` 
+//    elements in all browsers.
+legend
+  -webkit-box-sizing: border-box      // 1.
+  -moz-box-sizing: border-box         // 1.
+  box-sizing: border-box              // 1.
+  color: inherit                      // 2.
+  display: table                      // 1.
+  max-width: 100%                     // 1.
+  padding: 0                          // 3.
+  white-space: normal                 // 1.
+
+// 1. Исправить свойство `display` для IE 9-.
+// 2. Добавить правильное вертикальное выравнивание в Chrome, Firefox и Opera.
+progress
+  display: inline-block     // 1.
+  vertical-align: baseline  // 2.
+
+// Удалить стандартную вертикальную полосу прокрутки в IE.
+textarea
+  overflow: auto
+
+// 1. Добавить правильный размер окна в IE 10-.
+// 2. Удалить внешний отступ в IE 10-.
+input[type="checkbox"],
+input[type="radio"]
+  -webkit-box-sizing: border-box    // 1.
+  -moz-box-sizing: border-box       // 1.
+  box-sizing: border-box            // 1.
+  padding: 0                        // 2.
+
+// Исправить стиль курсора для кнопок увеличения и уменьшения в Chrome.
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button
+  height: auto
+
+// 1. Фикс странного внешненго вида в Chrome и Safari.
+// 2. Фикс стиля оформления в Safari.
+input[type="search"]
+  -webkit-appearance: textfield     // 1.
+  -webkit-box-sizing: content-box   // 1.
+  -moz-box-sizing: content-box      // 1.
+  box-sizing: content-box           // 1.
+  outline-offset: -2px              // 2.
+
+// Удалить внутренний отступ и кнопки отмены в Chrome и Safari на macOS.
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration
+  -webkit-appearance: none
+
+// 1. Исправить неспособность стилизировать интерактивные типы в iOS и Safari.
+// 2. Изменение свойства шрифта на `inherit` в Safari.
+::-webkit-file-upload-button
+  -webkit-appearance: button  // 1.
+  font: inherit               // 2.
+
+// Определение основной цветовой схемы проекта ==========================================
+$default-bg-color: #fff
+$default-text-color: #000
+$default-link-color: #285eff
+$default-link-color-hover: #ff00d0
+
+// Стили для стандартных элементов HTML =================================================
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before,
+  &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+// Отключаем  цвет подсветки ссылки или любого кликабельного элемента при касании.
+html
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+// 1. Определяем основной шрифт для всего проекта
+// 2. Определяем стандарнтый размер шрифта для всего проекта.
+// 3. Определяем стандрадный межстрочный интервал для всего проекта
+// 4. Определяем стандартный цвет шрифта
+// 5. Определяем стандартный цвет фона для проекта
+body
+  background-color: $default-bg-color                           // 5.
+  color: $default-text-color                                    // 4.
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif   // 1.
+  font-size: 16px                                               // 2.
+  line-height: 1.42857143                                       // 3.
+
+a
+  color: $default-link-color
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: $default-link-color-hover
+    text-decoration: none
+  &:focus
+    outline: 5px auto -webkit-focus-ring-color
+    outline-offset: -2px
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+  td,
+  th
+    padding: 0
+
+input,
+button,
+select,
+textarea
+  font-family: inherit
+  font-size: inherit
+  line-height: inherit
+
+img
+  vertical-align: middle
+
+[role="button"]
+  cursor: pointer
+
+// Bootstrap-стили ======================================================================
+
+// Сетка
+.container
+  margin-right: auto
+  margin-left: auto
+  padding-left: 5px
+  padding-right: 5px
+
+.container-fluid
+  margin-right: auto
+  margin-left: auto
+  padding-left: 5px
+  padding-right: 5px
+
+.row
+  margin-left: -5px
+  margin-right: -5px
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, 
+.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, 
+.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, 
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, 
+.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, 
+.col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, 
+.col-md-12, .col-lg-12, .col-xs-13, .col-sm-13, .col-md-13, .col-lg-13, .col-xs-14, 
+.col-sm-14, .col-md-14, .col-lg-14, .col-xs-15, .col-sm-15, .col-md-15, .col-lg-15, 
+.col-xs-16, .col-sm-16, .col-md-16, .col-lg-16, .col-xs-17, .col-sm-17, .col-md-17, 
+.col-lg-17, .col-xs-18, .col-sm-18, .col-md-18, .col-lg-18, .col-xs-19, .col-sm-19, 
+.col-md-19, .col-lg-19, .col-xs-20, .col-sm-20, .col-md-20, .col-lg-20, .col-xs-21, 
+.col-sm-21, .col-md-21, .col-lg-21, .col-xs-22, .col-sm-22, .col-md-22, .col-lg-22, 
+.col-xs-23, .col-sm-23, .col-md-23, .col-lg-23, .col-xs-24, .col-sm-24, .col-md-24, 
+.col-lg-24
+  position: relative
+  min-height: 1px
+  padding-left: 5px
+  padding-right: 5px
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, 
+.col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, 
+.col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, 
+.col-xs-23, .col-xs-24
+  float: left
+
+.col-xs-24
+  width: 100%
+
+.col-xs-23
+  width: 95.83333333%
+
+.col-xs-22
+  width: 91.66666667%
+
+.col-xs-21
+  width: 87.5%
+
+.col-xs-20
+  width: 83.33333333%
+
+.col-xs-19
+  width: 79.16666667%
+
+.col-xs-18
+  width: 75%
+
+.col-xs-17
+  width: 70.83333333%
+
+.col-xs-16
+  width: 66.66666667%
+
+.col-xs-15
+  width: 62.5%
+
+.col-xs-14
+  width: 58.33333333%
+
+.col-xs-13
+  width: 54.16666667%
+
+.col-xs-12
+  width: 50%
+
+.col-xs-11
+  width: 45.83333333%
+
+.col-xs-10
+  width: 41.66666667%
+
+.col-xs-9
+  width: 37.5%
+
+.col-xs-8
+  width: 33.33333333%
+
+.col-xs-7
+  width: 29.16666667%
+
+.col-xs-6
+  width: 25%
+
+.col-xs-5
+  width: 20.83333333%
+
+.col-xs-4
+  width: 16.66666667%
+
+.col-xs-3
+  width: 12.5%
+
+.col-xs-2
+  width: 8.33333333%
+
+.col-xs-1
+  width: 4.16666667%
+
+.col-xs-pull-24
+  right: 100%
+
+.col-xs-pull-23
+  right: 95.83333333%
+
+.col-xs-pull-22
+  right: 91.66666667%
+
+.col-xs-pull-21
+  right: 87.5%
+
+.col-xs-pull-20
+  right: 83.33333333%
+
+.col-xs-pull-19
+  right: 79.16666667%
+
+.col-xs-pull-18
+  right: 75%
+
+.col-xs-pull-17
+  right: 70.83333333%
+
+.col-xs-pull-16
+  right: 66.66666667%
+
+.col-xs-pull-15
+  right: 62.5%
+
+.col-xs-pull-14
+  right: 58.33333333%
+
+.col-xs-pull-13
+  right: 54.16666667%
+
+.col-xs-pull-12
+  right: 50%
+
+.col-xs-pull-11
+  right: 45.83333333%
+
+.col-xs-pull-10
+  right: 41.66666667%
+
+.col-xs-pull-9
+  right: 37.5%
+
+.col-xs-pull-8
+  right: 33.33333333%
+
+.col-xs-pull-7
+  right: 29.16666667%
+
+.col-xs-pull-6
+  right: 25%
+
+.col-xs-pull-5
+  right: 20.83333333%
+
+.col-xs-pull-4
+  right: 16.66666667%
+
+.col-xs-pull-3
+  right: 12.5%
+
+.col-xs-pull-2
+  right: 8.33333333%
+
+.col-xs-pull-1
+  right: 4.16666667%
+
+.col-xs-pull-0
+  right: auto
+
+.col-xs-push-24
+  left: 100%
+
+.col-xs-push-23
+  left: 95.83333333%
+
+.col-xs-push-22
+  left: 91.66666667%
+
+.col-xs-push-21
+  left: 87.5%
+
+.col-xs-push-20
+  left: 83.33333333%
+
+.col-xs-push-19
+  left: 79.16666667%
+
+.col-xs-push-18
+  left: 75%
+
+.col-xs-push-17
+  left: 70.83333333%
+
+.col-xs-push-16
+  left: 66.66666667%
+
+.col-xs-push-15
+  left: 62.5%
+
+.col-xs-push-14
+  left: 58.33333333%
+
+.col-xs-push-13
+  left: 54.16666667%
+
+.col-xs-push-12
+  left: 50%
+
+.col-xs-push-11
+  left: 45.83333333%
+
+.col-xs-push-10
+  left: 41.66666667%
+
+.col-xs-push-9
+  left: 37.5%
+
+.col-xs-push-8
+  left: 33.33333333%
+
+.col-xs-push-7
+  left: 29.16666667%
+
+.col-xs-push-6
+  left: 25%
+
+.col-xs-push-5
+  left: 20.83333333%
+
+.col-xs-push-4
+  left: 16.66666667%
+
+.col-xs-push-3
+  left: 12.5%
+
+.col-xs-push-2
+  left: 8.33333333%
+
+.col-xs-push-1
+  left: 4.16666667%
+
+.col-xs-push-0
+  left: auto
+
+.col-xs-offset-24
+  margin-left: 100%
+
+.col-xs-offset-23
+  margin-left: 95.83333333%
+
+.col-xs-offset-22
+  margin-left: 91.66666667%
+
+.col-xs-offset-21
+  margin-left: 87.5%
+
+.col-xs-offset-20
+  margin-left: 83.33333333%
+
+.col-xs-offset-19
+  margin-left: 79.16666667%
+
+.col-xs-offset-18
+  margin-left: 75%
+
+.col-xs-offset-17
+  margin-left: 70.83333333%
+
+.col-xs-offset-16
+  margin-left: 66.66666667%
+
+.col-xs-offset-15
+  margin-left: 62.5%
+
+.col-xs-offset-14
+  margin-left: 58.33333333%
+
+.col-xs-offset-13
+  margin-left: 54.16666667%
+
+.col-xs-offset-12
+  margin-left: 50%
+
+.col-xs-offset-11
+  margin-left: 45.83333333%
+
+.col-xs-offset-10
+  margin-left: 41.66666667%
+
+.col-xs-offset-9
+  margin-left: 37.5%
+
+.col-xs-offset-8
+  margin-left: 33.33333333%
+
+.col-xs-offset-7
+  margin-left: 29.16666667%
+
+.col-xs-offset-6
+  margin-left: 25%
+
+.col-xs-offset-5
+  margin-left: 20.83333333%
+
+.col-xs-offset-4
+  margin-left: 16.66666667%
+
+.col-xs-offset-3
+  margin-left: 12.5%
+
+.col-xs-offset-2
+  margin-left: 8.33333333%
+
+.col-xs-offset-1
+  margin-left: 4.16666667%
+
+.col-xs-offset-0
+  margin-left: 0%
+
+// Видимость блоков
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg,
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block
+  display: none !important
+
+// Адаптивные изображения
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+// Адаптивное медиа
+.embed-responsive
+  display: block
+  height: 0
+  overflow: hidden
+  padding: 0
+  position: relative
+
+.embed-responsive
+  .embed-responsive-item, iframe, embed, object, video
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    height: 100%
+    width: 100%
+    border: 0
+
+.embed-responsive-16by9
+  padding-bottom: 56.25%
+
+.embed-responsive-4by3
+  padding-bottom: 75%
+
+@-ms-viewport
+  width: device-width
+
+// Кастомные стили ======================================================================
