@@ -14,11 +14,8 @@
     <link rel="canonical" href="#">
 
     <!-- Подключение стилей сайта -->
+    <link rel="stylesheet" href="css/bootstrap24.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/xs.css">
-    <link rel="stylesheet" href="css/sm.css">
-    <link rel="stylesheet" href="css/md.css">
-    <link rel="stylesheet" href="css/lg.css">
 
     <!-- Подключение в web-master -->
     
@@ -44,8 +41,16 @@
     <link type="text/plain" rel="author" href="http://romanvolgasov.ru/humans.txt">
   </head>
   <body>
-    <h1>Привет привет привет</h1>
-    <p>Привет <a href="#">мир</a>!</p>
+    <header class="container header">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-responsive header__logo" src="img/logo.png" alt="Деловая Русь">
+        </div>
+        <div class="col-md-18">
+          <p>Привет</p>
+        </div>
+      </div>
+    </header>
     <!-- Подключаем скрипты -->
 
     <!-- Скрипты для корректной обработки тегов IE -->
