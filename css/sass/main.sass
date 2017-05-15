@@ -56,6 +56,14 @@ h1
   font-size: 2em
   margin: 0.67em 0
 
+// Исправление стандартных отступов для Chrome
+ul,
+menu,
+dir
+  -webkit-margin-before: 0
+  -webkit-margin-after: 0
+  -webkit-padding-start: 0
+
 // Grouping content =====================================================================
 
 // 1. Корректный размер окна для Firefox
@@ -253,7 +261,7 @@ input[type="search"]::-webkit-search-decoration
   font: inherit               // 2.
 
 // Определение основной цветовой схемы проекта ==========================================
-$default-bg-color: #ffffff
+$default-bg-color: #FFF
 $default-text-color: #000000
 $default-link-color: #285eff
 $default-link-color-hover: #ff00d0
@@ -282,7 +290,7 @@ body
   background-color: $default-bg-color                           // 5.
   color: $default-text-color                                    // 4.
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif   // 1.
-  font-size: 16px                                               // 2.
+  font-size: 18px                                               // 2.
   line-height: 1.42857143                                       // 3.
 
 a
@@ -1427,3 +1435,100 @@ img
 
 
 // Кастомные стили ======================================================================
+
+// Top-menu (BEM)
+.greedy-nav
+  position: relative
+  min-width: 250px
+
+.greedy-nav_hidden
+  visibility: hidden
+
+.greedy-nav__link
+  display: block
+  padding: 20px 30px
+  text-decoration: none
+
+.greedy-nav__btn
+  border: 0
+  cursor: pointer
+  height: 67px
+  padding: 0 15px
+  position: absolute
+  outline: none
+  right: 0
+  top: 0
+  &::after
+    content: attr(count)
+    border-radius: 50%
+    height: 35px
+    font-size: 16px
+    font-weight: 900
+    left: -16px
+    line-height: 28px
+    position: absolute
+    text-align: center
+    top: 16px
+    width: 35px
+
+.hamburger
+  height: 4px
+  position: relative
+  margin: 0
+  width: 32px
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 0
+    width: 32px
+    height: 4px
+  &:before
+    top: -8px
+  &:after
+    bottom: -8px
+
+.greedy-nav__visible-links
+  display: inline-table
+
+.greedy-nav__visible-links .greedy-nav__item
+  display: table-cell
+
+.greedy-nav__hidden-links
+  position: absolute
+  right: 0px
+  top: 110%
+
+.greedy-nav__hidden-links .greedy-nav__item
+  display: block
+
+  // Top-menu (main-theme)
+.greedy-nav__link_main-theme
+  color: #444444
+  &:active, &:hover, &:focus
+    color: #45a6bd
+
+.greedy-nav__visible-links .greedy-nav__item_main-theme
+  border-left: 1px solid #c4c4c4
+  &:nth-child(1)
+    border: none
+
+.greedy-nav__hidden-links .greedy-nav__item_main-theme
+  border-top: 1px solid #c4c4c4
+
+.greedy-nav__btn_main-theme
+  background-color: #ababab
+  &:hover
+    background-color: #45a6bd
+  &::after
+    background-color: #fff
+    border: 3px solid #ababab
+    color: #ababab
+  &:hover::after
+    background-color: #FFF
+    border: 3px solid #45a6bd
+    color: #45a6bd
+
+.hamburger_main-theme
+  background-color: #fff
+  &:before, &:after
+    background-color: #fff
