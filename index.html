@@ -4,7 +4,6 @@
     <!-- Служебные -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="x-dns-prefetch-control" content="on">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- DNS-Предзагрузка -->
@@ -25,7 +24,7 @@
     <!-- Основные стили сайта -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Иконочные шрифты (расскоментируй нужный) -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Подключение в web-master -->
     
@@ -52,30 +51,83 @@
     <link type="text/plain" rel="author" href="http://romanvolgasov.ru/humans.txt">
   </head>
   <body>
-    <div class="container">
+    <header class="container header">
       <div class="row">
-        <div class="col-sm-6 hidden-xs">
-          <img class="img-responsive" src="http://placehold.it/275x120">
+
+        <div class="col-xs-24">
+          <h1 class="main-title main-title_main-theme">Продажа пенополистирола<br> в Калининграде</h1>
         </div>
-        <div class="col-xs-24 col-sm-18">
+
+        <div class="col-sm-24 col-md-push-6 col-md-18">
           <nav class="greedy-nav">
-          <button class="greedy-nav__btn greedy-nav__btn_main-theme"><div class="hamburger hamburger_main-theme"></div></button>
+          <button class="greedy-nav__btn greedy-nav__btn_main-theme ripple"><span class="hamburger hamburger_main-theme"></span></button>
             <ul class="greedy-nav__visible-links">
-              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">navigation</a></li>
-              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">that</a></li>
-              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">handles</a></li>
-              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">overflowing</a></li>
-              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">menu</a></li>
+              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#garanty">гарантия</a></li>
+              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">пенополистирол<br>на фасад</a></li>
+              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">пенополистирол<br>на пол</a></li>
+              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">пенополистирол<br>для дома</a></li>
+              <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">контакты</a></li>
               <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">elements</a></li>
               <li class="greedy-nav__item greedy-nav__item_main-theme"><a class="greedy-nav__link greedy-nav__link_main-theme" href="#">effortlessly</a></li>
             </ul>
             <ul class="greedy-nav__hidden-links greedy-nav_hidden"></ul>
           </nav>
         </div>
+
+        <div class="clearfix"></div>
+
+        <div class="header-cover col-sm-24">
+          <a class="header-cover__btn header-cover__btn_main-theme ripple" href="#">Хочу сделать заказ</a>
+          <img class="img-responsive header-cover__img" src="img/polistirol.png" alt="Пенополистирол cover">
+        </div>
+        
+        <a class="hidden-xs" href="#garanty"><span class="scroll-down scroll-down_dark"></span></a>
+
       </div>
-    </div>
+    </header>
     
+    <article class="container-fluid features features_main-theme" id="garanty">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-24">
+            <h2 class="sub-title features__sub-title_main-theme">Мы гарантируем</h2>
+          </div>
+
+          <section class="hidden-xs col-sm-8 col-md-6 features__item">
+            <img class="img-responsive" src="img/svg/density.svg" alt="Плотность пенополистирола">
+            <h3 class="features__title features__title_main-theme">Плотность соответствует заявленной</h3>
+          </section>
+
+          <div class="col-md-2 visible-md visible-lg"></div>
+
+          <section class="hidden-xs col-sm-8 col-md-6 features__item">
+            <img class="img-responsive" src="img/svg/stock.svg" alt="Пенополистирол всегда в наличии">
+            <h3 class="features__title features__title_main-theme">У нас всегда в налиии есть пенополистирол</h3>
+          </section>
+
+          <div class="col-md-2 visible-md visible-lg"></div>
+
+          <section class="hidden-xs col-sm-8 col-md-6 features__item">
+            <img class="img-responsive" src="img/svg/geometry.svg" alt="Правильная геометрия блоков пенополистирола">
+            <h3 class="features__title features__title_main-theme">Наши блоки только с правильной геометрией</h3>
+          </section>
+
+          <section class="col-xs-24 visible-xs">
+            <ul class="features__list">
+              <li class="features__list-item features__list-item_main-theme">Плотность соответствует заявленной</li>
+              <li class="features__list-item features__list-item_main-theme">У нас всегда в налиии есть пенополистирол</li>
+              <li class="features__list-item features__list-item_main-theme">Наши блоки только с правильной геометрией</li>
+            </ul>
+          </section>
+
+          <a class="hidden-xs" href="#"><span class="scroll-down scroll-down_light"></span></a>
+
+        </div>
+      </div>
+    </article>
     <!-- Подключаем скрипты -->
+
     <!-- Скрипты для корректной обработки тегов IE -->
     <!-- Обеспечиваем базовые стили HTML5 для браузеров IE ниже 10 версии с помощью html5 shiv -->
     <!--[if lte IE 9]> <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script> <![endif]-->
@@ -88,8 +140,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <!-- Основные скрипты сайта -->
-    <script src="js/main.js"></script>
-
+    <script src="js/main.js" async></script>
     <!-- Подключаем счётчики -->
 
   </body>
