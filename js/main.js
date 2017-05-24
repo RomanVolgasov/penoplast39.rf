@@ -74,3 +74,33 @@ $(document).on('click', '.ripple', function(e) {
       $(this).remove();
     });
 });
+
+// Cards
+$(".card__toggle").on("click", function(){
+    
+    // Card toggle state    
+    $(".card__toggle").removeClass("card_active");
+    $(this).addClass("card_active");
+    
+    var isAnimating = false;
+    
+    if( !isAnimating ){
+        isAnimating = true;
+        
+        $(".card").find(".card__content").css("z-index", 0);
+        $(".card").removeClass("card_active");
+
+        var that = $(this);
+
+        $(this).siblings().css("z-index",1);
+
+        setTimeout(function(){
+            that.parent().toggleClass("card_active").find(".card__content").on("transitionend", function(){
+                isAnimating = false;
+            }); ;
+            
+        },10);
+    } else {
+        return;
+    }
+});

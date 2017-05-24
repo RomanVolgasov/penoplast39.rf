@@ -1467,7 +1467,7 @@ img
   src: url('../font/comfortaa-700-normal.woff2') format("woff2"), url('../font/comfortaa-700-normal.woff') format("woff"), url('../font/comfortaa-700-normal.ttf') format("truetype")
 
 // Типографика ==========================================================================
-// h1
+// h1 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .main-title
   font-family: 'Intro', normal
   font-size: 4em
@@ -1476,30 +1476,30 @@ img
   top: 160px
   z-index: 10
 
-// h1 (main-theme)
-.main-title_main-theme
-  color: #3E3E3E
-  text-shadow: 5px -5px 0px rgba(235,235,235,1)
-
-// h2
+// h2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .sub-title
   font-family: 'Intro', normal
   font-size: 4em
 
-// h2 (main-theme)
-.features__sub-title_main-theme
-  color: #E9E9E9
-  text-shadow: 5px -5px 0px rgba(62,62,62,1);
+// header (main-theme) ``````````````````````````````````````````````````````````````````
+.main-title_main-theme,
+.sub-title_main-theme
+  color: #3E3E3E
+  text-shadow: 5px -5px 0px rgba(235,235,235,1)
 
-// h3
-.features__title
-  font-size: 1.4em
-  text-align: center
+// h3 -> cards ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.card__content-title
+  font-weight: 300
+  font-size: 3em
+  line-height: 1
+  margin: 0 0 30px
+  display: block
 
-.features__title_main-theme
-  color: #FFFFFF
+.card__content-title-strong
+  font-weight: 700
+  display: block
 
-// Адаптивные заголовки
+// Адаптивная типографика +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 @media (max-width: 767px)
   .main-title
     top: 100px
@@ -1514,22 +1514,30 @@ img
     font-size: 3.45em
     top: 230px
 
-// Header ===============================================================================
+// Основные блоки сайта =================================================================
+// Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .header
   height: 100vh
   position: relative
   min-height: 750px
 
-// Адаптивные header
+// Features +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.features
+  height: 100vh
+  position: relative
+
+// Адаптивные основные блока сайта ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 @media (max-width: 767px)
   .header
     min-height: 568px
 
-// Top-menu (BEM) =======================================================================
+// Навигация ============================================================================
+// Top-menu +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .greedy-nav
   position: relative
   margin: 1em 0
   min-width: 250px
+  z-index: 100
 
 .greedy-nav_hidden
   visibility: hidden
@@ -1597,7 +1605,7 @@ img
 .greedy-nav__hidden-links .greedy-nav__item
   display: block
 
-// Top-menu (main-theme)
+// Top-menu (main-theme) ````````````````````````````````````````````````````````````````
 .greedy-nav__link_main-theme
   color: #2c3e50
   &:active, &:hover, &:focus
@@ -1633,12 +1641,13 @@ img
   &:before, &:after
     background-color: #FFFFFF
 
-// Header-Cover =========================================================================
+// Составные блоки сайта ================================================================
+// Header-Cover +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .header-cover
   max-height: 600px
   position: relative
 
-// Кнопка в cover
+// btn -> cover +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .header-cover__btn
   cursor: pointer
   display: inline-block
@@ -1648,22 +1657,7 @@ img
   top: 500px
   z-index: 2
 
-// Адаптивная кнопка
-@media (max-width: 767px)
-  .header-cover__btn
-    width: 97%
-    padding: 20px 40px
-    top: 330px
-
-@media (min-width: 768px) and (max-width: 991px)
-  .header-cover__btn
-    top: 500px
-
-@media (min-width: 992px) and (max-width: 1199px)
-  .header-cover__btn
-    top: 520px
-
-// Кнопка в cover (main-theme)
+// btn -> cover (main-theme) ````````````````````````````````````````````````````````````
 .header-cover__btn_main-theme
   background-color: #0ABB57
   box-shadow: 0px 1px 4px rgba(0,0,0,0.8)
@@ -1677,29 +1671,176 @@ img
     transition: .2s
     box-shadow: 0px 1px 4px transparent
 
-// Cover img
+// img -> cover +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .header-cover__img
   position: inherit
   float: right
   top: 110px
   z-index: 1
 
-// Адаптивный Cover img
+// Адаптивные составной блок ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 @media (max-width: 767px)
+  .header-cover__btn
+    width: 97%
+    padding: 20px 40px
+    top: 330px
   .header-cover__img
     top: 0
 
 @media (min-width: 768px) and (max-width: 991px)
+  .header-cover__btn
+    top: 500px
   .header-cover__img
     top: 150px
     width: 600px
 
 @media (min-width: 992px) and (max-width: 1199px)
+  .header-cover__btn
+    top: 520px
   .header-cover__img
     top: 150px
     width: 700px
 
-// Scroll-down ==========================================================================
+// Карты -> features ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.cards
+  align-items: flex-end
+  border-radius: 5px
+  display: flex
+  height: 550px
+  overflow: hidden
+  padding: 30px
+  position: relative
+  margin: auto
+  width: 100%
+
+.card
+  display: inline-block
+  margin-right: 20px
+
+.card__toggle
+  border: 2px solid transparent
+  border-radius: 50%
+  cursor: pointer
+  display: block
+  font-size: 24px
+  height: 48px
+  line-height: 1.8
+  position: relative
+  text-align: center
+  transition: .3s ease
+  width: 48px
+  z-index: 4
+
+.card__content
+  border-radius: 5px
+  height: 100%
+  left: 0
+  overflow: hidden
+  padding: 100px 0 0
+  position: absolute
+  top: 0
+  transition: 0.9s ease
+  width: 100%
+  
+.card__content-row
+  display: table
+  height: 100%
+  width: 100%
+  
+.card__content-col
+  display: table-cell
+  height: 100%
+  vertical-align: top
+  width: 50%
+  &.card__content-left
+    opacity: 0
+    padding-left: 50px
+  &.card__content-right
+    opacity: 0
+    padding-left: 30px
+
+.card.card_active .card__content-col
+  opacity: 1
+
+.card_overview
+  .card__toggle
+    opacity: 1
+    position: absolute
+    right: 30px
+    top: 30px
+  .card__content
+    -webkit-clip-path: circle(0% at 91.5% 75px)
+  &.card_active
+    .card__toggle
+      opacity: 0
+    .card__content
+      -webkit-clip-path: circle(270% at 91.5% 75px)
+
+.card_density
+  .card__content
+    clip-path: circle(0% at 50px 88%)
+    -webkit-clip-path: circle(0% at 76px 88%)
+  &.card_active .card__content
+    clip-path: circle(270% at 50px 88%)
+    -webkit-clip-path: circle(270% at 76px 88%)
+
+.card_geometry
+  .card__content
+    clip-path: circle(0% at 150px 88%)
+    -webkit-clip-path: circle(0% at 150px 88%)
+  &.card_active .card__content
+    clip-path: circle(270% at 150px 88%)
+    -webkit-clip-path: circle(270% at 150px 88%)
+    
+.card_stock
+  .card__content
+    clip-path: circle(0% at 220px 88%)
+    -webkit-clip-path: circle(0% at 220px 88%)
+  &.card_active .card__content
+    clip-path: circle(270% at 220px 88%)
+    -webkit-clip-path: circle(270% at 220px 88%)
+
+.card__content-img
+  height: 80%
+  max-width: 90%
+  width: 100%
+
+// Карты -> features (main-theme) ```````````````````````````````````````````````````````
+.cards_main-theme
+  background: #FEFEFE
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 3px 5px 20px rgba(0, 0, 0, 0.2)
+
+.card__toggle_main-theme
+  color: #005353
+  &:hover
+    color: #005353
+  &.card_active
+    color: #FFFFFF
+    border-color: #FFFFFF
+
+.card_overview
+  .card__toggle_main-theme
+    color: #FFFFFF
+  .card__content_main-theme
+    background-color: #F2F2F2
+
+.card_density .card__content_main-theme, 
+.card_geometry .card__content_main-theme, 
+.card_stock .card__content_main-theme
+  color: #FFFFFF
+
+.card_density
+  .card__content
+    background-color: #24A834
+.card_geometry
+  .card__content
+    background-color: #D9372E
+.card_stock
+  .card__content
+    background-color: #1C8282
+
+// Прочие элементы страницы =============================================================
+// Scroll-down ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .scroll-down
   border-radius: 25px
   height: 70px
@@ -1742,6 +1883,7 @@ img
     -webkit-transform: translateY(46px)
     transform: translateY(46px)
 
+// Scroll-down (theme) ``````````````````````````````````````````````````````````````````
 .scroll-down_dark
   box-shadow: inset 0 0 0 1px #3E3E3E
   &:before
@@ -1752,15 +1894,7 @@ img
   &:before
     background: #FFFFFF
 
-// Features =============================================================================
-.features
-  height: 100vh
-  position: relative
-
-.features_main-theme
-  background-color: #0ABB57
-
-// Маркирванный спискок
+// Маркирванный спискок +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .features__list
   list-style: disc
   padding-left: 30px
@@ -1774,9 +1908,10 @@ img
   color: #FFFFFF
 
 // Анимация =============================================================================
+// Ripple +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .ripple
   overflow:hidden
-  transform: translate3d(0, 0, 0)
+  // transform: translate3d(0, 0, 0)
 
 .ripple__effect
   background-color: rgba(255,255,255,0.5)
