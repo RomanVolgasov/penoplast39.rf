@@ -1507,6 +1507,11 @@ img
   .sub-title
     font-size: 1.45em
     padding: 0 10px
+  .card__content-title
+    font-size: 1.4em
+    font-weight: 300
+    line-height: 1.2
+    margin: 0 0 30px
 
 @media (min-width: 768px) and (max-width: 991px)
   .main-title,
@@ -1523,6 +1528,11 @@ img
 
 // Features +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .features
+  height: 100vh
+  position: relative
+
+// Catalot ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.catalog
   height: 100vh
   position: relative
 
@@ -1684,6 +1694,7 @@ img
     width: 97%
     padding: 20px 40px
     top: 330px
+    text-align: center
   .header-cover__img
     top: 0
 
@@ -1725,6 +1736,7 @@ img
   font-size: 24px
   height: 48px
   line-height: 1.8
+  margin-left: 8px
   position: relative
   text-align: center
   transition: .3s ease
@@ -1838,6 +1850,52 @@ img
 .card_stock
   .card__content
     background-color: #1C8282
+
+// Адаптивный блок краты -> features ++++++++++++++++++++++++++++++++++++++++++++++++++++
+@media (max-width: 767px)
+  .cards
+    height: 550px
+    padding: 20px
+    width: 90%
+  .card
+    margin-right: 10px
+  .card__content
+    padding: 80px 0 0
+  .card__content-col
+    width: 20%
+    &.card__content-left
+      opacity: 0
+      padding-left: 30px
+    &.card__content-right
+      opacity: 0
+      padding-left: 30px
+  .card_overview
+    .card__toggle
+      right: 10px
+      top: 10px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .cards
+    height: 650px
+  .card__content-col
+    display: inline-block
+    height: 100%
+    vertical-align: top
+    width: 50%
+    &.card__content-left
+      opacity: 0
+      padding-left: 50px
+    &.card__content-right
+      opacity: 0
+      padding-left: 30px
+  .card__content-img
+    margin-top: 60px
+    height: 400px
+
+@media (min-width: 992px) and (max-width: 1199px)
+  .card__content-img
+    width: 400px
+    height: 400px
 
 // Прочие элементы страницы =============================================================
 // Scroll-down ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
