@@ -1479,7 +1479,7 @@ img
 // h2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .sub-title
   font-family: 'Intro', normal
-  font-size: 4em
+  font-size: 3em
 
 // header (main-theme) ``````````````````````````````````````````````````````````````````
 .main-title_main-theme,
@@ -1516,12 +1516,18 @@ img
     font-weight: 300
     line-height: 1.2
     margin: 0 0 30px
+  .catalog_25-sub-title,
+  .catalog_35-sub-title,
+  .catalog_15-sub-title
+    padding-top: 55px
 
 @media (min-width: 768px) and (max-width: 991px)
   .main-title,
   .sub-title
     font-size: 3.45em
     top: 230px
+  .sub-title
+    margin: 60px 0
 
 // Основные блоки сайта =================================================================
 // Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1545,10 +1551,16 @@ img
 .features_main-theme
  background-color: #FFF
 
-// Catalot ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Catalog ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .catalog_15,
 .catalog_25,
 .catalog_35
+  height: 100vh
+  position: relative
+  z-index: 20
+
+// Footer +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.footer
   height: 100vh
   position: relative
   z-index: 20
@@ -1557,6 +1569,13 @@ img
 @media (max-width: 767px)
   .header
     min-height: 568px
+  .price-mobile
+    position: relative
+    margin-top: 18px
+    z-index: 20
+@media (max-width: 767px) and (orientation: landscape)
+  .price-mobile
+    margin-top: 270px
 
 // Hidden
 .hidden
@@ -2053,6 +2072,13 @@ img
     -webkit-transition: all .6s ease-in-out
     transition: all .6s ease-in-out
 
+.catalog-shoping-card__title
+  display: inline-block
+  font-size: 1.6em
+  padding-right: 71px
+  text-align: right
+  width: 100%
+
 .catalog-shoping-card__content
   color: #333333
   font-weight: 400
@@ -2159,6 +2185,65 @@ img
       -webkit-transition: all .4s ease-in-out
       transition: all .4s ease-in-out
 
+// Адаптинвый блок catalog-card +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@media (min-width: 768px) and (max-width: 991px)
+  .catalog-shoping-card-left-side
+    width: 35%
+  .catalog-shoping-card-right-side
+    width: 80%
+  .catalog-shoping-card__content
+    padding: 0 60px 0 25px
+  
+
+// Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.footer__map
+  border-radius: 5px
+  padding: 20px
+  min-height: 65vh
+
+.footer__address,
+.footer__phone,
+.footer__schedule
+  border-radius: 5px
+  padding: 20px
+  position: relative
+.footer__phone
+ margin: 40px 0
+
+.footer__map_main-theme
+  background-color: #FFF
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 3px 5px 20px rgba(0, 0, 0, 0.2)
+
+.footer__address_main-theme,
+.footer__phone_main-theme,
+.footer__schedule_main-theme
+  border: 4px dotted #ccc
+
+.footer__header
+  background-color: #FFF
+  display: inline-block
+  padding: 5px 15px
+  position: absolute
+  top: -20px
+  i
+    color: #CCC
+    padding-right: 15px
+
+@media (max-width: 767px)
+  .footer__schedule
+    margin-bottom: 40px
+@media (min-width: 768px) and (max-width: 991px)
+  .footer__address,
+  .footer__phone,
+  .footer__schedule
+    height: 150px
+    width: 235px
+    margin-bottom: 40px
+  .footer__phone
+    margin: 0
+  .footer__address,
+  .footer__phone
+    margin-right: 7px
 
 // Прочие элементы страницы =============================================================
 // Scroll-down ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2227,6 +2312,12 @@ img
 
 .features__list-item_main-theme
   color: #FFFFFF
+
+// Список price-list ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.price-mobile__list
+  li
+    padding: 10px 0
+    border-bottom: 1px solid #cccccc
 
 // Анимация =============================================================================
 // Ripple +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
