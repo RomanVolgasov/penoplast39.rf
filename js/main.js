@@ -778,13 +778,3 @@ $(".psb-gost-15100").click(function() {
   $("#six-15").removeClass("catalog-shoping-card_active");
   $("#seven-15").addClass("catalog-shoping-card_active");
 })
-
-// Плавная прокрутка по якорям
-$(document).ready(function() {
-$('a[href^="#"]').click(function(){
-var el = $(this).attr('href');
-$('body').animate({
-scrollTop: $(el).offset().top}, 600);
-return false;
-});
-});
